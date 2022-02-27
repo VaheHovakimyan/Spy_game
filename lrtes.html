@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./website_spy_icon.png">
+    <link rel="stylesheet" href="./lrtes.css">
+    <title>Detective</title>
+</head>
+<body id="body">
+    <div class="check_failed_flex" id="check_failed_flex">
+        <div class="check_failed" id="check_failed">
+            <p class="check_text_intro">Դե չէ էլի․․․</p>
+            <p class="check_text">Մուտքագրված տվյալները սխալ են!!!</p>
+            <p class="check_text">Մուտքագրեք այնպիսի տվյալներ որպեսզի խաղի իմաստը չկորի, եթե խաղացողների թիվը երկուսով չի գերազանցում լրտեսների թվին ապա խաղալն անիմաստ է։</p>
+            <div class="check_button_flex">
+                <button class="check_button" id="button_ok">Հասկացա</button>
+            </div>
+            
+        </div>
+    </div>
+
+   <div class="intro_main" id="intro_main">
+    <div class="main" id="main_first_block">
+         <h1 class="title">Detective</h1>
+
+            <div class="open_close_div">
+                <div id="word">
+                    <p id="open_close_text">Ստարտ</p>
+                    <button class="open_close_button" id="open_close_button">Open</button>
+                </div>
+            </div>            
+            <div class="time_title_div" id="time_title_div">
+                <div class="time_title_flex" id="time_title_flex">
+                    <p class="time_title" id="time_title">Time</p>
+                </div>
+                <div class="time_value_flex" id="time_value_flex">
+                    <p class="time_value" id="time_value">00:00</p>
+                </div>
+                <div class="end_button_flex">
+                    <button class="end_button" id="end_button" controls>End</button>
+                </div>
+                <audio id="audio">
+                    <source src="./end_sound.mp3" type="audio/ogg">
+                    <source src="./end_sound.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div id="block_div_1" class="block_div">
+                <button id="participians_minus" class="count_minus"></button>
+                <p id="count_participants">Participians: 3</p>
+                <button id="participians_plus" class="count_plus"></button>
+            </div>
+            <div id="block_div_2" class="block_div">
+                <button id="spy_minus" class="count_minus"></button>
+                <p id="count_spy">Count spy: 1</p>
+                <button id="spy_plus" class="count_plus"></button>
+            </div>
+            <div id="block_div_3" class="block_div">
+                <button id="time_minus" class="count_minus"></button>
+                <p id="count_time">Time: 30sec</p>
+                <button id="time_plus" class="count_plus"></button>
+            </div>
+        <button id="button">Let's go</button>
+    </div>
+   </div>
+    <script src="./lrtes.js"></script>
+</body>
+</html>

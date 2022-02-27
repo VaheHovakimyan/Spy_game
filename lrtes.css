@@ -1,0 +1,192 @@
+body{
+    background-image: url("./icon-spy-secret-agent-seamless-background-vector-4450059.jpg");
+    background-size: cover;
+    margin: 0;
+    filter: blur(0px);
+}
+.intro_main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.title{
+    font-size: 30px;
+    font-family: cursive;
+    font-weight: 400;
+    margin: 16px;
+}
+.main{
+    width: 500px;
+    height: 430px;
+    background-image: linear-gradient(360deg,#111,#eee);
+    text-align: center;
+    margin: 0;
+    user-select: none;
+}
+.count_minus{
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    background-image: url("./minus-removebg-preview.png");
+    background-size: cover;
+    cursor: pointer;
+    border: 0;
+    background-color: rgba(0,0,0,0);
+}
+.count_plus{
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    background-image: url("./plus-removebg-preview.png");
+    background-size: cover;
+    cursor: pointer;
+    border: 0;
+    background-color: rgba(0,0,0,0);
+}
+.block_div{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    font-size: 27px;
+    font-family: cursive;
+}
+#button{
+    cursor: pointer;
+    background-color: rgb(20, 20, 20);
+    color: white;
+    width: 180px;
+    height: 50px;
+    border: 0;
+    border-radius: 10px;
+    font-family: cursive;
+    font-size: 25px;
+    font-weight: 550;
+}    
+.main_second_block{
+    width: 500px;
+    height: 430px;
+    background-image: linear-gradient(360deg,#111,#eee);
+    text-align: center;
+    margin: 0;
+    user-select: none;
+    visibility: hidden;
+}
+.open_close_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.open_close_button{
+    color: white;
+    width: 180px;
+    height: 50px;
+    background-color: rgb(20, 20, 20);
+    user-select: none;
+    border: 0;
+    margin: 0;
+    border-radius: 10px;
+    font-family: cursive;
+    font-size: 25px;
+    font-weight: 550;
+    cursor: pointer;
+}
+#word{
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+}
+#open_close_text{
+    font-size: 35px;
+}
+.check_failed_flex{
+    display: flex;
+    justify-content: center;
+}
+.check_failed{
+    width: 600px;
+    height: 400px;
+    background-color: black;
+    margin: 0;
+    transition: ease-out .6s;
+    position: absolute;
+    top: -65%;
+}
+.check_text_intro{
+    user-select: none;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+.check_text{
+    user-select: none;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+.check_button_flex{
+    display: flex;
+    justify-content: center;
+}
+.check_button{
+    user-select: none;
+    font-size: 25px;
+    color: white;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.time_title_div{
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+    margin: 0;
+}
+.time_title{
+    width: 0px;
+    height: 0px;
+    margin: 0;
+    visibility: hidden;
+}
+.time_title_flex{
+    width: 500px;
+    display: flex;
+    justify-content: center;
+}
+.time_value{
+    width: 0px;
+    height: 0px;
+    margin: 0;
+    visibility: hidden;
+    text-align: center;
+    font-size: 50px;
+}
+.time_value_flex{
+    margin: 0;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+}
+.end_button_flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+}
+.end_button{
+    color: white;
+    width: 180px;
+    height: 50px;
+    background-color: rgb(20, 20, 20);
+    user-select: none;
+    border: 0;
+    margin: 0;
+    border-radius: 10px;
+    font-family: cursive;
+    font-size: 25px;
+    font-weight: 300;
+    cursor: pointer;
+}

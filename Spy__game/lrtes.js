@@ -413,7 +413,6 @@ function End_button(){
     if (end_button.style.color === "white") {
         time_values[time_index] = 0;
         end_sound.play();
-        // setTimeout(Sound_pause,2000)
     }
 }
 // end_button.addEventListener("click",End_button)
@@ -490,31 +489,6 @@ function Bool() {
     }
 }
 
-// function qsan(){
-//     console.log("Downloading 20%")
-// }
-
-// function qarasun(){
-//     console.log("Downloading 40%")
-// }
-
-// function vatsun(){
-//     console.log("Downloading 60%")
-// }
-
-// function utanasun(){
-//     console.log("Downloading 80%")
-// }
-
-// function verj(){
-//     console.log("Pentagon is hacked")
-// }
-
-// setTimeout(qsan,1500)
-// setTimeout(qarasun,3000)
-// setTimeout(vatsun,4500)
-// setTimeout(utanasun,6000)
-// setTimeout(verj,7500)
 
 //<span style="color:#F71200; width:200px; display:flex; justify-content:center;">Լրտես</span>
 ////////////////--------- Time (display) ----------///////////////

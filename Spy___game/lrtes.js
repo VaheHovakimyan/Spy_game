@@ -270,6 +270,7 @@ Time_part()
 
 function Sound_play(){
     end_sound.play();
+    time_bool = true;
 }
 
 function Sound_pause(){
@@ -292,12 +293,9 @@ function Time_counter() {
         end_button.style.height = "80px";
         end_button.innerHTML = "Try again";
         let sound_func = setTimeout(Sound_play,10);
-        time_bool = true;
         if(time_bool == true){
-            // let sound_play = setTimeout(Sound_pause,2000);
             clearTimeout(sound_func)
         }
-        // setTimeout(Sound_pause,2000)
     }
 }
 

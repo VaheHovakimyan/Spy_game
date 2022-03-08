@@ -257,7 +257,6 @@ Check_minute()
 
 function Time_part() {
     Check_minute()
-    // really_time = "jhedgfjhgfwsf"
     second = time_values[time_index] % 60;
     if (second < 10) {
         second = "0" + second;

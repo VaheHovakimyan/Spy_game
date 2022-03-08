@@ -371,9 +371,6 @@ function Open() {
     }
 }
 
-//function Sound(){
-    // end_sound.play(); 
-//}
 
 
 function Close() {

@@ -59,6 +59,8 @@ let really_time; //= "00:00";
 let end_sound = document.getElementById("audio");
 let time_bool;
 /////////////////////////////////////////////////////////////////
+let try_again_button = document.getElementById("try_again");
+/////////////////////////////////////////////////////////////////
 
 
 function Participians_check() {
@@ -412,14 +414,14 @@ function Close() {
         open_close_button.innerHTML = "Open";
         word_p.innerHTML = "-----------"
     }
-    console.log("Hethashvarkkkkkkkkkkk");
 }
 
 function End_button(){
-    if (end_button.style.color === "white") {
-        time_values[time_index] = 0;
-        // end_sound.play();
-    }
+    time_values[time_index] = 0;
+    // if (end_button.style.color === "white") {
+    //     time_values[time_index] = 0;
+    //     // end_sound.play();
+    // }
 }
 // end_button.addEventListener("click",End_button)
 
@@ -460,7 +462,10 @@ function Try_again(){
         lets_go.style.height = "100px"
         lets_go.style.width = "100px"
         lets_go.style.padding = "50px"
+
 }
+
+try_again_button.addEventListener("click",Try_again)
 end_button.addEventListener("click",End_button)
 
 // end_button.addEventListener("click",Bool_try_end)

@@ -190,3 +190,22 @@ body{
     font-weight: 300;
     cursor: pointer;
 }
+.try_again_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.try_again{
+    width: 150px;
+    height: 80px;
+    background-color: rgb(20, 20, 20);
+    color: white;
+    font-size: 25px;
+    font-weight: 300;
+    margin: 0;
+    border: 0;
+    font-family: cursive;
+    user-select: none;
+    cursor: pointer;
+    border-radius: 10px;
+}

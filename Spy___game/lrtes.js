@@ -291,9 +291,10 @@ function Time_counter() {
         time_bool = false;
     } else {
         time_value.innerHTML = "Spy is win";
-        end_button.style.width = "150px";
-        end_button.style.height = "80px";
-        end_button.innerHTML = "Try again";
+        end_button.style.width = "0px";
+        end_button.style.height = "0px";
+        end_button.style.visibility = "hidden";
+        // end_button.innerHTML = "Try again";
         let sound_func = setTimeout(Sound_play,10);
         if(time_bool == true){
             clearTimeout(sound_func)
@@ -418,10 +419,6 @@ function Close() {
 
 function End_button(){
     time_values[time_index] = 0;
-    // if (end_button.style.color === "white") {
-    //     time_values[time_index] = 0;
-    //     // end_sound.play();
-    // }
 }
 // end_button.addEventListener("click",End_button)
 
@@ -435,58 +432,43 @@ function End_button(){
 // end_button.addEventListener("click",playAudio)
 
 function Try_again(){
-        word_p.style.visibility = "visible"
-        open_close_button.style.visibility = "visible"
-        time_title_div.style.visibility = "hidden"//
-        time_title_div.style.width = "0px"
-        time_title_div.style.height = "0px"
-        time_title.style.visibility = "hidden"//
-        time_title.style.width = "0px"
-        time_title.style.height = "0px"
-        time_value.style.visibility = "hidden"//
-        time_value.style.width = "0px"
-        time_value.style.height = "0px"
-        end_button.style.visibility = "hidden"//
-        end_button.style.width = "0px"
-        end_button.style.height = "0px"
-        first_block_div_1.style.visibility = "visible"
-        first_block_div_1.style.height = "100px"
-        first_block_div_1.style.width = "100px"
-        first_block_div_2.style.visibility = "visible"
-        first_block_div_2.style.height = "100px"
-        first_block_div_2.style.width = "100px"
-        first_block_div_3.style.visibility = "visible"
-        first_block_div_3.style.height = "100px"
-        first_block_div_3.style.width = "100px"
-        lets_go.style.visibility = "visible"
-        lets_go.style.height = "100px"
-        lets_go.style.width = "100px"
-        lets_go.style.padding = "50px"
-
+        // word_p.style.visibility = "hidden"
+        // open_close_button.style.visibility = "hidden"
+        // time_title_div.style.visibility = "hidden"//
+        // time_title_div.style.width = "0px"
+        // time_title_div.style.height = "0px"
+        // time_title.style.visibility = "hidden"//
+        // time_title.style.width = "0px"
+        // time_title.style.height = "0px"
+        // time_value.style.visibility = "hidden"//
+        // time_value.style.width = "0px"
+        // time_value.style.height = "0px"
+        // end_button.style.visibility = "hidden"//
+        // end_button.style.width = "0px"
+        // end_button.style.height = "0px"
+        // first_block_div_1.style.visibility = "visible"
+        // first_block_div_1.style.height = "70px"
+        // first_block_div_1.style.width = "500px"
+        // // first_block_div_1.style.display = "flex"
+        // // first_block_div_1.style.justifyContent = "space-around"
+        // first_block_div_2.style.visibility = "visible"
+        // first_block_div_2.style.height = "70px"
+        // first_block_div_2.style.width = "500px"
+        // first_block_div_3.style.visibility = "visible"
+        // first_block_div_3.style.height = "70px"
+        // first_block_div_3.style.width = "500px"
+        // lets_go.style.visibility = "visible"
+        // lets_go.style.height = "100px"
+        // lets_go.style.width = "200px"
+        // lets_go.style.padding = "10px"
+        document.location.reload();
 }
 
 try_again_button.addEventListener("click",Try_again)
 end_button.addEventListener("click",End_button)
 
-// end_button.addEventListener("click",Bool_try_end)
-// function Bool_try_end(){
-//     if(button_try_end == false){
-//         End_button()
-//     }else{
-//         Try_again()
-//     }
-// }
-// if(time_values[time_index] === 0){
-//     end_button.addEventListener("click",Try_again)
-// }else{
-//     end_button.addEventListener("click",End_button)
-// }
 
-// if(time_values[time_index] == 0){
-//     end_button.addEventListener("click",Try_again)
-// }
-
-console.log(done_array.length);
+//console.log(done_array.length);
 
 
 open_close_button.addEventListener("click", Bool)

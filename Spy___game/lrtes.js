@@ -1,6 +1,8 @@
 //////////////--------   Intro   --------//////////////
 
-//🍕🍕🍕//
+//🕵️‍♂️🕵️‍♂️🕵️‍♂️//
+
+//Game created by Vahe Hovakimyan
 
 //////////////--------   Count participians  --------/////////////
 let participians_minus = document.getElementById("participians_minus");
@@ -26,7 +28,7 @@ let time_plus = document.getElementById("time_plus");
 let time_p = document.getElementById("count_time");
 let time_value = document.getElementById("time_value");
 let time_title_div = document.getElementById("time_title_div");
-let time_values = [5, 60, 120, 180, 300, 600];
+let time_values = [30, 60, 120, 180, 300, 600];
 let time_texts = ["30sec", "1min", "2min", "3min", "5min", "10min"];
 let time_index = 0;
 /////////////////////////////////////////////////////////////////
@@ -60,6 +62,7 @@ let end_sound = document.getElementById("audio");
 let time_bool;
 /////////////////////////////////////////////////////////////////
 let try_again_button = document.getElementById("try_again");
+let try_again_div = document.getElementById("try_again_div")
 /////////////////////////////////////////////////////////////////
 
 
@@ -132,10 +135,8 @@ function Minus_participians() {
     count_participants.innerHTML = "Participians: " + participians_count;
     random_index = Math.ceil(Math.random() * participians_count);
     done_array.length = participians_count;
-
     New_Rannumbers();
     Add_spy();
-    console.log(done_array);
     Participians_check();
 }
 
@@ -144,10 +145,8 @@ function Plus_participians() {
     count_participants.innerHTML = "Participians: " + participians_count
     random_index = Math.ceil(Math.random() * participians_count)
     done_array.length = participians_count;
-
     New_Rannumbers();
     Add_spy();
-    console.log(done_array);
     Participians_check();
 }
 
@@ -171,25 +170,23 @@ function Spy_check() {
         spy_plus.addEventListener("click", Plus_spy)
     }
 }
-Spy_check()
+Spy_check();
 
 
 function Minus_spy() {
     count_spy--;
     count_spy_p.innerHTML = "Count spy: " + count_spy;
-    New_Rannumbers()
-    Add_spy()
-    Spy_check()
-    console.log(done_array);
+    New_Rannumbers();
+    Add_spy();
+    Spy_check();
 }
 
 function Plus_spy() {
     count_spy++;
     count_spy_p.innerHTML = "Count spy: " + count_spy;
-    New_Rannumbers()
-    Add_spy()
-    Spy_check()
-    console.log(done_array);
+    New_Rannumbers();
+    Add_spy();
+    Spy_check();
 }
 
 ////////////////--------- Time variable ----------///////////////
@@ -214,33 +211,10 @@ function Time_check() {
 }
 Time_check()
 
-// time_value.innerHTML = "jhedgfjhgfwsf"
+
 
 function Check_minute() {
-    // time_value.innerHTML = "ruieh";
-    if (time_values[time_index] < 60) {
-        minute = 0;
-    } else if (time_values[time_index] < 120 && time_values[time_index] > 60) {
-        minute = 1;
-    } else if (time_values[time_index] < 180 && time_values[time_index] > 120) {
-        minute = 2;
-    } else if (time_values[time_index] < 240 && time_values[time_index] > 180) {
-        minute = 3;
-    } else if (time_values[time_index] < 300 && time_values[time_index] > 240) {
-        minute = 4;
-    } else if (time_values[time_index] < 360 && time_values[time_index] > 300) {
-        minute = 5;
-    } else if (time_values[time_index] < 420 && time_values[time_index] > 360) {
-        minute = 6;
-    } else if (time_values[time_index] < 480 && time_values[time_index] > 420) {
-        minute = 7;
-    } else if (time_values[time_index] < 540 && time_values[time_index] > 480) {
-        minute = 8;
-    } else if (time_values[time_index] < 600 && time_values[time_index] > 540) {
-        minute = 9;
-    } else if (time_values[time_index] < 660 && time_values[time_index] > 600) {
-        minute = 10;
-    }
+    minute = Math.floor(time_values[time_index] / 60);
     second = time_values[time_index] % 60;
     if (second < 10) {
         second = "0" + second;
@@ -250,14 +224,6 @@ function Check_minute() {
 }
 Check_minute()
 
-// second = time_values[time_index] % 60;
-//     if (second < 10) {
-//         second = "0" + second;
-//     }
-//     really_time = minute + ":" + second;
-//     time_value.innerHTML = really_time;
-
-// time_value.innerHTML = really_time;
 
 function Time_part() {
     Check_minute()
@@ -294,7 +260,16 @@ function Time_counter() {
         end_button.style.width = "0px";
         end_button.style.height = "0px";
         end_button.style.visibility = "hidden";
-        // end_button.innerHTML = "Try again";
+        end_button.hidden = true;
+        try_again_div.style.width = "500px";
+        try_again_div.style.height = "70px"
+        try_again_button.style.width = "150px";
+        try_again_button.style.height = "70px";
+        try_again_button.style.fontSize = "25px";
+        try_again_button.style.borderRadius = "10px";
+        try_again_button.style.backgroundColor = "rgb(20, 20, 20)";
+        try_again_button.style.visibility = "visible";
+        try_again_button.hidden = false;
         let sound_func = setTimeout(Sound_play,10);
         if(time_bool == true){
             clearTimeout(sound_func)
@@ -306,7 +281,6 @@ function Time_counter() {
 function Minus_time() {
     time_index--;
     time_p.innerHTML = "Time: " + time_texts[time_index];
-    console.log(time_values[time_index]);
     Time_check();
     Time_part();
 }
@@ -314,7 +288,6 @@ function Minus_time() {
 function Plus_time() {
     time_index++;
     time_p.innerHTML = "Time: " + time_texts[time_index];
-    console.log(time_values[time_index]);
     Time_check();
     Time_part();
 }
@@ -420,55 +393,14 @@ function Close() {
 function End_button(){
     time_values[time_index] = 0;
 }
-// end_button.addEventListener("click",End_button)
-
-// if(time_values[time_index] === 0){
-//     end_sound.play();
-// }
-
-// function playAudio() { 
-//     end_sound.play(); 
-// } 
-// end_button.addEventListener("click",playAudio)
 
 function Try_again(){
-        // word_p.style.visibility = "hidden"
-        // open_close_button.style.visibility = "hidden"
-        // time_title_div.style.visibility = "hidden"//
-        // time_title_div.style.width = "0px"
-        // time_title_div.style.height = "0px"
-        // time_title.style.visibility = "hidden"//
-        // time_title.style.width = "0px"
-        // time_title.style.height = "0px"
-        // time_value.style.visibility = "hidden"//
-        // time_value.style.width = "0px"
-        // time_value.style.height = "0px"
-        // end_button.style.visibility = "hidden"//
-        // end_button.style.width = "0px"
-        // end_button.style.height = "0px"
-        // first_block_div_1.style.visibility = "visible"
-        // first_block_div_1.style.height = "70px"
-        // first_block_div_1.style.width = "500px"
-        // // first_block_div_1.style.display = "flex"
-        // // first_block_div_1.style.justifyContent = "space-around"
-        // first_block_div_2.style.visibility = "visible"
-        // first_block_div_2.style.height = "70px"
-        // first_block_div_2.style.width = "500px"
-        // first_block_div_3.style.visibility = "visible"
-        // first_block_div_3.style.height = "70px"
-        // first_block_div_3.style.width = "500px"
-        // lets_go.style.visibility = "visible"
-        // lets_go.style.height = "100px"
-        // lets_go.style.width = "200px"
-        // lets_go.style.padding = "10px"
-        document.location.reload();
+    document.location.reload();
 }
 
 try_again_button.addEventListener("click",Try_again)
 end_button.addEventListener("click",End_button)
 
-
-//console.log(done_array.length);
 
 
 open_close_button.addEventListener("click", Bool)
@@ -482,7 +414,4 @@ function Bool() {
     }
 }
 
-
-//<span style="color:#F71200; width:200px; display:flex; justify-content:center;">Լրտես</span>
-////////////////--------- Time (display) ----------///////////////
 //[Vahe777]//

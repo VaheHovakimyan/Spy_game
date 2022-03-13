@@ -33,20 +33,20 @@ let time_texts = ["30sec", "1min", "2min", "3min", "5min", "10min"];
 let time_index = 0;
 /////////////////////////////////////////////////////////////////
 let lets_go = document.getElementById("button");
-let main_first_block = document.getElementById("main_first_block")
-let main_second_block = document.getElementById("main_second_block")
-let first_block_div_1 = document.getElementById("block_div_1")
-let first_block_div_2 = document.getElementById("block_div_2")
-let first_block_div_3 = document.getElementById("block_div_3")
+let main_first_block = document.getElementById("main_first_block");
+let main_second_block = document.getElementById("main_second_block");
+let first_block_div_1 = document.getElementById("block_div_1");
+let first_block_div_2 = document.getElementById("block_div_2");
+let first_block_div_3 = document.getElementById("block_div_3");
 let check_failed = document.getElementById("check_failed");
-let check_failed_flex = document.getElementById("check_failed_flex")
-let body_blur = document.getElementById("body")
+let check_failed_flex = document.getElementById("check_failed_flex");
+let body_blur = document.getElementById("body");
 /////////////////////////////////////////////////////////////////
 let word_elements = document.getElementById("word");
 let word_p = document.getElementById("open_close_text");
 let open_close_button = document.getElementById("open_close_button");
 let button_bool = true;
-//let word_array = ['Մարս', 'Երևան', 'ջունգլի', 'Արարատ', 'Կասկադ', 'Յուպիտեր', 'Գյումրի', 'Լուսին', 'Վրաստան', 'ԱՄՆ', 'Ֆրանսիա', 'Ռուսաստան', 'Իրան', 'հիվանդանոց', 'անապատ', 'թանգարան', 'Յոթերորդ երկինք', 'Շենքի պադվալ', 'հավաբուն', 'գոմ', 'ծով', 'անտառ', 'Հանրապետության հրապարակ', 'կինոստուդիա', 'թատրոն', 'համերգասրահ', ' Սովետաշենի աղբանոց', 'թեյարան', 'սրճարան', 'լվացքատուն', 'Սուրիկի կտուր', 'կենդանաբանական այգի', 'բուսաբանական այգի', 'մատենադարան', 'բանկ', 'գրախանութ', 'դրախտ', 'պահարան', 'գրապահարան', 'ուսուցչանոց', 'ծաղկանոց', 'ջերմոց', 'Ֆեյսբուկի գրասենյակ', 'համալսարան', 'տեխնիկայի խանութ', 'Ձայնագրման ստուդիա', 'Հարսանյաց սրահ', 'Քվեստ', 'Օպերա', 'քննասրահ', 'Հյուսիսային պողոտա', 'աշխարհի ծեր', 'Վարդուշի խանութ', 'բազառի բուդկա', 'Զիփլայն', 'օդանավակայան', 'մարշուտկա', 'Լունապարկ', 'զբոսայգի', 'ախմախների կլան', 'դպրոց', 'մետրո', 'հոգեբուժարան', 'կոշկակարի բուդկա','վառարան','խաղատուն','սառնարան','մետրոյի զուգարան','լուցկու տուփ','գրադարան','դպրոցի բուֆետ','մեքենայի բեռնախցիկ','բանանի արկղ','ԱԱԾ-ի պադվալ','դարբնոց','արջի որջ','ծերանոց',''];//,''//some words added by Edgar // funny words
+//let word_array = ['Մարս', 'Երևան', 'ջունգլի', 'Արարատ', 'Կասկադ', 'Յուպիտեր', 'Գյումրի', 'Լուսին', 'Վրաստան', 'ԱՄՆ', 'Ֆրանսիա', 'Ռուսաստան', 'Իրան', 'հիվանդանոց', 'անապատ', 'թանգարան', 'Յոթերորդ երկինք', 'Շենքի պադվալ', 'հավաբուն', 'գոմ', 'ծով', 'անտառ', 'Հանրապետության հրապարակ', 'կինոստուդիա', 'թատրոն', 'համերգասրահ', ' Սովետաշենի աղբանոց', 'թեյարան', 'սրճարան', 'լվացքատուն', 'Սուրիկի կտուր', 'կենդանաբանական այգի', 'բուսաբանական այգի', 'մատենադարան', 'բանկ', 'գրախանութ', 'դրախտ', 'պահարան', 'գրապահարան', 'ուսուցչանոց', 'ծաղկանոց', 'ջերմոց', 'Ֆեյսբուկի գրասենյակ', 'համալսարան', 'տեխնիկայի խանութ', 'Ձայնագրման ստուդիա', 'Հարսանյաց սրահ', 'Քվեստ', 'Օպերա', 'քննասրահ', 'Հյուսիսային պողոտա', 'աշխարհի ծեր', 'Վարդուշի խանութ','Զիփլայն', 'օդանավակայան', 'մարշուտկա', 'Լունապարկ', 'զբոսայգի','դպրոց', 'մետրո', 'հոգեբուժարան', 'կոշկակարի բուդկա','վառարան','խաղատուն','սառնարան','լուցկու տուփ','գրադարան','դպրոցի բուֆետ','մեքենայի բեռնախցիկ','բանանի արկղ','դարբնոց','արջի որջ','ծերանոց',''];//,''//some words added by Edgar // funny words
 let word_array = ['Մարս', 'Երևան', 'ջունգլի', 'Արարատ', 'Կասկադ', 'Յուպիտեր', 'Գյումրի', 'Լուսին', 'Վրաստան', 'ԱՄՆ', 'Ֆրանսիա', 'Ռուսաստան', 'Իրան', 'հիվանդանոց', 'անապատ', 'թանգարան']
 let ran = Math.floor(Math.random() * word_array.length);
 let done_random_word = word_array[ran];
@@ -62,7 +62,7 @@ let end_sound = document.getElementById("audio");
 let time_bool;
 /////////////////////////////////////////////////////////////////
 let try_again_button = document.getElementById("try_again");
-let try_again_div = document.getElementById("try_again_div")
+let try_again_div = document.getElementById("try_again_div");
 /////////////////////////////////////////////////////////////////
 
 

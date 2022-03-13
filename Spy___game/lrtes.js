@@ -54,7 +54,7 @@ let done_random_word = word_array[ran];
 let word_array_index = 0;
 let time_title = document.getElementById("time_title");
 let end_button = document.getElementById("end_button");
-let button_try_end;
+// let button_try_end;
 /////////////////////////////////////////////////////////////////
 let minute, second;
 let really_time; //= "00:00";
@@ -325,7 +325,6 @@ for (let i = 0; i < participians_count; i++) {
 }
 done_array[spy_ran1] = lrtes_text
 
-console.log(done_array);
 
 
 function Open() {

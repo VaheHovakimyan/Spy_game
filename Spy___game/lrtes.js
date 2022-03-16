@@ -47,14 +47,13 @@ let word_p = document.getElementById("open_close_text");
 let open_close_button = document.getElementById("open_close_button");
 let button_bool = true;
 //let word_array = ['Մարս', 'Երևան', 'ջունգլի', 'Արարատ', 'Կասկադ', 'Յուպիտեր', 'Գյումրի', 'Լուսին', 'Վրաստան', 'ԱՄՆ', 'Ֆրանսիա', 'Ռուսաստան', 'Իրան', 'հիվանդանոց', 'անապատ', 'թանգարան', 'Յոթերորդ երկինք', 'Շենքի պադվալ', 'հավաբուն', 'գոմ', 'ծով', 'անտառ', 'Հանրապետության հրապարակ', 'կինոստուդիա', 'թատրոն', 'համերգասրահ', ' Սովետաշենի աղբանոց', 'թեյարան', 'սրճարան', 'լվացքատուն', 'Սուրիկի կտուր', 'կենդանաբանական այգի', 'բուսաբանական այգի', 'մատենադարան', 'բանկ', 'գրախանութ', 'դրախտ', 'պահարան', 'գրապահարան', 'ուսուցչանոց', 'ծաղկանոց', 'ջերմոց', 'Ֆեյսբուկի գրասենյակ', 'համալսարան', 'տեխնիկայի խանութ', 'Ձայնագրման ստուդիա', 'Հարսանյաց սրահ', 'Քվեստ', 'Օպերա', 'քննասրահ', 'Հյուսիսային պողոտա', 'աշխարհի ծեր', 'Վարդուշի խանութ','Զիփլայն', 'օդանավակայան', 'մարշուտկա', 'Լունապարկ', 'զբոսայգի','դպրոց', 'մետրո', 'հոգեբուժարան', 'կոշկակարի բուդկա','վառարան','խաղատուն','սառնարան','լուցկու տուփ','գրադարան','դպրոցի բուֆետ','մեքենայի բեռնախցիկ','բանանի արկղ','դարբնոց','արջի որջ','ծերանոց',''];//,''//some words added by Edgar // funny words
-let word_array = ['Մարս', 'Երևան', 'ջունգլի', 'Արարատ', 'Կասկադ', 'Յուպիտեր', 'Գյումրի', 'Լուսին', 'Վրաստան', 'ԱՄՆ', 'Ֆրանսիա', 'Ռուսաստան', 'Իրան', 'հիվանդանոց', 'անապատ', 'թանգարան']
+let word_array = ['Մարս', 'Երևան', 'ջունգլի', 'Արարատ', 'Կասկադ', 'Յուպիտեր', 'Գյումրի', 'Լուսին', 'Վրաստան', 'ԱՄՆ', 'Ֆրանսիա', 'Ռուսաստան', 'Իրան', 'հիվանդանոց', 'անապատ', 'թանգարան'];
 let ran = Math.floor(Math.random() * word_array.length);
 let done_random_word = word_array[ran];
 /////////////////////////////////////////////////////////////////
 let word_array_index = 0;
 let time_title = document.getElementById("time_title");
 let end_button = document.getElementById("end_button");
-// let button_try_end;
 /////////////////////////////////////////////////////////////////
 let minute, second;
 let really_time; //= "00:00";
@@ -85,7 +84,7 @@ function Participians_check() {
         participians_plus.addEventListener("click", Plus_participians);
     }
 }
-Participians_check()
+Participians_check();
 
 function New_Rannumbers() {
     for (let i = 0; i < 1000; i++) {
@@ -102,30 +101,30 @@ function New_Rannumbers() {
 function Add_spy() {
     if (count_spy == 1) {
         for (let i = 0; i < participians_count; i++) {
-            done_array[i] = word_array[ran]
+            done_array[i] = word_array[ran];
         }
         done_array[spy_ran1] = lrtes_text;
     } else if (count_spy == 2) {
         for (let i = 0; i < participians_count; i++) {
-            done_array[i] = word_array[ran]
+            done_array[i] = word_array[ran];
         }
-        done_array[spy_ran1] = lrtes_text
-        done_array[spy_ran2] = lrtes_text
+        done_array[spy_ran1] = lrtes_text;
+        done_array[spy_ran2] = lrtes_text;
     } else if (count_spy == 3) {
         for (let i = 0; i < participians_count; i++) {
             done_array[i] = word_array[ran]
         }
-        done_array[spy_ran1] = lrtes_text
-        done_array[spy_ran2] = lrtes_text
-        done_array[spy_ran3] = lrtes_text
+        done_array[spy_ran1] = lrtes_text;
+        done_array[spy_ran2] = lrtes_text;
+        done_array[spy_ran3] = lrtes_text;
     } else if (count_spy == 4) {
         for (let i = 0; i < participians_count; i++) {
-            done_array[i] = word_array[ran]
+            done_array[i] = word_array[ran];
         }
-        done_array[spy_ran1] = lrtes_text
-        done_array[spy_ran2] = lrtes_text
-        done_array[spy_ran3] = lrtes_text
-        done_array[spy_ran4] = lrtes_text
+        done_array[spy_ran1] = lrtes_text;
+        done_array[spy_ran2] = lrtes_text;
+        done_array[spy_ran3] = lrtes_text;
+        done_array[spy_ran4] = lrtes_text;
     }
 }
 
@@ -141,9 +140,9 @@ function Minus_participians() {
 }
 
 function Plus_participians() {
-    participians_count++
-    count_participants.innerHTML = "Participians: " + participians_count
-    random_index = Math.ceil(Math.random() * participians_count)
+    participians_count++;
+    count_participants.innerHTML = "Participians: " + participians_count;
+    random_index = Math.ceil(Math.random() * participians_count);
     done_array.length = participians_count;
     New_Rannumbers();
     Add_spy();
@@ -162,10 +161,10 @@ function Spy_check() {
     }
 
     if (count_spy >= 4) {
-        spy_plus.style.opacity = "50%"
+        spy_plus.style.opacity = "50%";
         spy_plus.disabled = true;
     } else {
-        spy_plus.style.opacity = "100%"
+        spy_plus.style.opacity = "100%";
         spy_plus.disabled = false;
         spy_plus.addEventListener("click", Plus_spy)
     }
@@ -209,8 +208,7 @@ function Time_check() {
         time_plus.addEventListener("click", Plus_time);
     }
 }
-Time_check()
-
+Time_check();
 
 
 function Check_minute() {
@@ -256,7 +254,7 @@ function Time_counter() {
         lets_go.style.padding = "0px";
         time_bool = false;
     } else {
-        time_value.innerHTML = "Spy is win";
+        time_value.innerHTML = "Game end";
         end_button.style.width = "0px";
         end_button.style.height = "0px";
         end_button.style.visibility = "hidden";
@@ -272,7 +270,7 @@ function Time_counter() {
         try_again_button.hidden = false;
         let sound_func = setTimeout(Sound_play,10);
         if(time_bool == true){
-            clearTimeout(sound_func)
+            clearTimeout(sound_func);
         }
     }
 }
@@ -298,32 +296,32 @@ function Plus_time() {
 
 function Check() {
     if (participians_count - 2 >= count_spy) {
-        first_block_div_1.style.visibility = "hidden"
-        first_block_div_2.style.visibility = "hidden"
-        first_block_div_3.style.visibility = "hidden"
-        lets_go.style.visibility = "hidden"
-        word_elements.style.visibility = "visible"
-        word_elements.style.width = "200px"
-        word_elements.style.height = "30px"
+        first_block_div_1.style.visibility = "hidden";
+        first_block_div_2.style.visibility = "hidden";
+        first_block_div_3.style.visibility = "hidden";
+        lets_go.style.visibility = "hidden";
+        word_elements.style.visibility = "visible";
+        word_elements.style.width = "200px";
+        word_elements.style.height = "30px";
     } else {
-        check_failed.style.top = "20%"
+        check_failed.style.top = "20%";
     }
 }
-lets_go.addEventListener("click", Check)
+lets_go.addEventListener("click", Check);
 
 ////////////////--------- Button OK ----------///////////////
-let button_ok = document.getElementById("button_ok")
+let button_ok = document.getElementById("button_ok");
 
 function Button_ok() {
-    check_failed.style.top = "-65%"
+    check_failed.style.top = "-65%";
 }
-button_ok.addEventListener("click", Button_ok)
+button_ok.addEventListener("click", Button_ok);
 ////////////////--------- Words ----------///////////////
 
 for (let i = 0; i < participians_count; i++) {
     done_array[i] = word_array[ran];
 }
-done_array[spy_ran1] = lrtes_text
+done_array[spy_ran1] = lrtes_text;
 
 
 
@@ -339,10 +337,10 @@ function Open() {
         open_close_button.innerHTML = "Close";
     }
     if (word_array_index - 1 === participians_count) {
-        lets_go.style.visibility = "hidden"
-        lets_go.style.height = "0px"
-        lets_go.style.width = "0px"
-        lets_go.style.padding = "0px"
+        lets_go.style.visibility = "hidden";
+        lets_go.style.height = "0px";
+        lets_go.style.width = "0px";
+        lets_go.style.padding = "0px";
     }
 }
 
@@ -350,42 +348,42 @@ function Open() {
 
 function Close() {
     if (participians_count === word_array_index) {
-        word_p.style.visibility = "hidden"
-        open_close_button.style.visibility = "hidden"
-        time_title_div.style.visibility = "visible"
-        time_title_div.style.width = "400px"
-        time_title_div.style.height = "300px"
-        time_title.style.visibility = "visible"
-        time_title.style.width = "100px"
-        time_title.style.height = "100px"
-        time_title.style.textAlign = "center"
-        time_title.style.fontSize = "40px"
-        time_title.style.fontFamily = "cursive"
-        time_value.style.visibility = "visible"
-        time_value.style.width = "500px"
-        time_value.style.height = "100px"
-        end_button.style.visibility = "visible"
-        end_button.style.width = "90px"
-        end_button.style.height = "50px"
-        end_button.style.color = "white"
-        first_block_div_1.style.visibility = "hidden"
-        first_block_div_1.style.height = "0px"
-        first_block_div_1.style.width = "0px"
-        first_block_div_2.style.visibility = "hidden"
-        first_block_div_2.style.height = "0px"
-        first_block_div_2.style.width = "0px"
-        first_block_div_3.style.visibility = "hidden"
-        first_block_div_3.style.height = "0px"
-        first_block_div_3.style.width = "0px"
-        lets_go.style.visibility = "hidden"
-        lets_go.style.height = "0px"
-        lets_go.style.width = "0px"
-        lets_go.style.padding = "0px"
-        Time_counter()
-        setInterval(Time_counter, 1000)
+        word_p.style.visibility = "hidden";
+        open_close_button.style.visibility = "hidden";
+        time_title_div.style.visibility = "visible";
+        time_title_div.style.width = "400px";
+        time_title_div.style.height = "300px";
+        time_title.style.visibility = "visible";
+        time_title.style.width = "100px";
+        time_title.style.height = "100px";
+        time_title.style.textAlign = "center";
+        time_title.style.fontSize = "40px";
+        time_title.style.fontFamily = "cursive";
+        time_value.style.visibility = "visible";
+        time_value.style.width = "500px";
+        time_value.style.height = "100px";
+        end_button.style.visibility = "visible";
+        end_button.style.width = "90px";
+        end_button.style.height = "50px";
+        end_button.style.color = "white";
+        first_block_div_1.style.visibility = "hidden";
+        first_block_div_1.style.height = "0px";
+        first_block_div_1.style.width = "0px";
+        first_block_div_2.style.visibility = "hidden";
+        first_block_div_2.style.height = "0px";
+        first_block_div_2.style.width = "0px";
+        first_block_div_3.style.visibility = "hidden";
+        first_block_div_3.style.height = "0px";
+        first_block_div_3.style.width = "0px";
+        lets_go.style.visibility = "hidden";
+        lets_go.style.height = "0px";
+        lets_go.style.width = "0px";
+        lets_go.style.padding = "0px";
+        Time_counter();
+        setInterval(Time_counter, 1000);
     } else {
         open_close_button.innerHTML = "Open";
-        word_p.innerHTML = "-----------"
+        word_p.innerHTML = "-----------";
     }
 }
 
@@ -397,12 +395,12 @@ function Try_again(){
     document.location.reload();
 }
 
-try_again_button.addEventListener("click",Try_again)
-end_button.addEventListener("click",End_button)
+try_again_button.addEventListener("click",Try_again);
+end_button.addEventListener("click",End_button);
 
 
 
-open_close_button.addEventListener("click", Bool)
+open_close_button.addEventListener("click", Bool);
 function Bool() {
     if (button_bool) {
         Open()

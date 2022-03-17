@@ -112,7 +112,7 @@ function Add_spy() {
         done_array[spy_ran2] = lrtes_text;
     } else if (count_spy == 3) {
         for (let i = 0; i < participians_count; i++) {
-            done_array[i] = word_array[ran]
+            done_array[i] = word_array[ran];
         }
         done_array[spy_ran1] = lrtes_text;
         done_array[spy_ran2] = lrtes_text;
@@ -152,12 +152,12 @@ function Plus_participians() {
 /////////////////------- Count spy -------//////////////////
 function Spy_check() {
     if (count_spy <= 1) {
-        spy_minus.style.opacity = "50%"
+        spy_minus.style.opacity = "50%";
         spy_minus.disabled = true;
     } else {
-        spy_minus.style.opacity = "100%"
+        spy_minus.style.opacity = "100%";
         spy_minus.disabled = false;
-        spy_minus.addEventListener("click", Minus_spy)
+        spy_minus.addEventListener("click", Minus_spy);
     }
 
     if (count_spy >= 4) {
@@ -166,7 +166,7 @@ function Spy_check() {
     } else {
         spy_plus.style.opacity = "100%";
         spy_plus.disabled = false;
-        spy_plus.addEventListener("click", Plus_spy)
+        spy_plus.addEventListener("click", Plus_spy);
     }
 }
 Spy_check();
@@ -403,10 +403,10 @@ end_button.addEventListener("click",End_button);
 open_close_button.addEventListener("click", Bool);
 function Bool() {
     if (button_bool) {
-        Open()
+        Open();
         button_bool = false;
     } else {
-        Close()
+        Close();
         button_bool = true;
     }
 }
